@@ -1,12 +1,14 @@
+import nextStep from "./next-step.page";
+
 //.check().should('be.checked')
-export default class ShippingStepPage{
+export default class ShippingStepPage extends nextStep{
     constructor(){
+        super()
         this.terms = `#cgv`;
-        this.proceedButton = `.cart_navigation > .button`;
     }
-    proceed = function(){
+    checkTermsAndProceed = function(){
         cy.get(this.terms).check().should('be.checked')
-          .get(this.proceedButton).click()
+        this.proceed();
     }
 
 }

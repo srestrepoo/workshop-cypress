@@ -1,8 +1,8 @@
-export default class PaymentStepPage{
+import nextStep from "./next-step.page";
+
+export default class PaymentStepPage extends nextStep{
     constructor(){
-        this.proceedButton = `#HOOK_PAYMENT > div:nth-child(1) > div > p > a`; 
-    }
-    proceed = function(){
-        cy.get(this.proceedButton).click()
+        super()
+        super.proceedButton = `#HOOK_PAYMENT > div:nth-child(1) > div > p > a`; 
     }
 }

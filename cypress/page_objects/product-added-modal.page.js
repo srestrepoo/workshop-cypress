@@ -1,8 +1,8 @@
-export default class ProductAddedModalPage{
+import nextStep from "./next-step.page";
+
+export default class ProductAddedModalPage extends nextStep{
     constructor(){
-        this.confirmAddedButton = `[style*="display: block;"] .button-container > a`;
-    }
-    confirmAdded = function(){
-        cy.get(this.confirmAddedButton).click();
+        super()
+        super.proceedButton = `[style*="display: block;"] .button-container > a`;
     }
 }

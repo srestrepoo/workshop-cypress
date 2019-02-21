@@ -1,8 +1,7 @@
-export default class SummaryStepPage{
+import nextStep from "./next-step.page";
+
+export default class SummaryStepPage extends nextStep{
     constructor(){
-        this.proceedButton = `.cart_navigation > .button`;
-    }
-    proceed = function(){
-        cy.get(this.proceedButton).click()
+        super()
     }
 }

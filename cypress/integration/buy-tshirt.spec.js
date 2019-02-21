@@ -28,11 +28,11 @@ describe('automation practice', () => {
     it('test',() => {
         menuContentPage.goToTShirtMenu();
         productListPage.selectProduct('Printed Dress');
-        productAddedModalPage.confirmAdded();
+        productAddedModalPage.proceed();
         summaryStepPage.proceed();
         signInStepPage.signIn(email,password);
         addressStepPage.proceed();
-        shippingStepPage.proceed();
+        shippingStepPage.checkTermsAndProceed();
         paymentStepPage.proceed();
         bankPaymentPage.proceed();
     })
