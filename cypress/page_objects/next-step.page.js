@@ -1,8 +1,8 @@
 export default class nextStep{
     constructor(){
-        this.proceedButton = `.cart_navigation > .button`;
+        this.proceedToTheNextStepButton = `.cart_navigation > .button`;
     }
-    proceed = function(){
-        cy.get(this.proceedButton).click()
+    proceedToTheNextStep = function(){
+        cy.get(this.proceedToTheNextStepButton).click()
     }
 }

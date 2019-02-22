@@ -28,12 +28,12 @@ describe('automation practice', () => {
     it('test',() => {
         menuContentPage.goToTShirtMenu();
         productListPage.selectProduct('Printed Dress');
-        productAddedModalPage.proceed();
-        summaryStepPage.proceed();
+        productAddedModalPage.proceedToTheNextStep();
+        summaryStepPage.proceedToTheNextStep();
         signInStepPage.signIn(email,password);
-        addressStepPage.proceed();
-        shippingStepPage.checkTermsAndProceed();
-        paymentStepPage.proceed();
-        bankPaymentPage.proceed();
+        addressStepPage.proceedToTheNextStep();
+        shippingStepPage.checkTermsAndProceedToTheNextStep();
+        paymentStepPage.proceedToTheNextStep();
+        bankPaymentPage.proceedToTheNextStep();
     })
 })
