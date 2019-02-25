@@ -26,14 +26,22 @@ describe('automation practice', () => {
         cy.visit('http://automationpractice.com/');
     })
     it('test',() => {
-        menuContentPage.goToTShirtMenu();
-        productListPage.selectProduct('Printed Dress');
-        productAddedModalPage.proceedToTheNextStep();
-        summaryStepPage.proceedToTheNextStep();
-        signInStepPage.signIn(email,password);
-        addressStepPage.proceedToTheNextStep();
-        shippingStepPage.checkTermsAndProceedToTheNextStep();
-        paymentStepPage.proceedToTheNextStep();
-        bankPaymentPage.proceedToTheNextStep();
+        // menuContentPage.goToTShirtMenu();
+        // productListPage.selectProduct('Printed Dress');
+        cy.selectProduct('Printed Dress');
+        // productAddedModalPage.proceedToTheNextStep();
+        //summaryStepPage.proceedToTheNextStep();
+        // cy.proceedToCheckout();
+        //signInStepPage.signIn(email,password);
+        // cy.login(email,password);
+        //addressStepPage.proceedToTheNextStep();
+        // cy.proceedToCheckout();
+
+
+        //shippingStepPage.checkTermsAndProceedToTheNextStep();
+        //paymentStepPage.proceedToTheNextStep();
+        // bankPaymentPage.proceedToTheNextStep();
+        //cy.proceedToCheckout();
+        // cy.paymentProcess();
     })
 })
