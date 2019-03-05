@@ -1,3 +1,5 @@
+
+/**
 import MenuContentPage from '../page_objects/menu-content.page';
 import ProductListPage from '../page_objects/product-list.page';
 import ProductAddedModalPage from '../page_objects/product-added-modal.page';
@@ -7,7 +9,6 @@ import AddressStepPage from '../page_objects/address-step.page';
 import ShippingStepPage from '../page_objects/shipping-step.page';
 import PaymentStepPage from '../page_objects/payment-step.page';
 import BankPaymentPage from '../page_objects/bank-payment.page';
-
 
 const menuContentPage = new MenuContentPage();
 const productListPage = new ProductListPage();
@@ -20,6 +21,7 @@ const paymentStepPage = new PaymentStepPage();
 const bankPaymentPage = new BankPaymentPage();
 const email = `aperdomobo@gmail.com`;
 const password = `WorkshopProtractor`;
+**/
 
 describe('automation practice', () => {
     before(()=>{
@@ -28,20 +30,17 @@ describe('automation practice', () => {
     it('test',() => {
         // menuContentPage.goToTShirtMenu();
         // productListPage.selectProduct('Printed Dress');
-        cy.selectProduct('Printed Dress');
-        // productAddedModalPage.proceedToTheNextStep();
+        // cy.mockIndexReq();
+        cy.selectProduct('Faded Short Sleeve T-shirts');
+        // cy.wait(500);
+        //productAddedModalPage.proceedToTheNextStep();
         //summaryStepPage.proceedToTheNextStep();
-        // cy.proceedToCheckout();
         //signInStepPage.signIn(email,password);
-        // cy.login(email,password);
         //addressStepPage.proceedToTheNextStep();
-        // cy.proceedToCheckout();
-
 
         //shippingStepPage.checkTermsAndProceedToTheNextStep();
         //paymentStepPage.proceedToTheNextStep();
         // bankPaymentPage.proceedToTheNextStep();
-        //cy.proceedToCheckout();
-        // cy.paymentProcess();
+        cy.paymentProcess();
     })
 })
