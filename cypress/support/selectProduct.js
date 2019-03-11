@@ -1,6 +1,7 @@
-Cypress.Commands.add("selectProduct", (productName) => { 
+Cypress.Commands.add("selectProduct", (productName, numMenu) => { 
+    const continueShopping = `[title="Continue shopping"]`;
     const productList = `.product_list`;
-    const tShirtMenu = `.menu-content > li:nth-child(3) a`
+    const tShirtMenu = `#block_top_menu > ul > li:nth-child(${numMenu}) > a`;
     // const tShirtMenu = `#block_top_menu > ul > li:nth-child(3) > a`;
  
     cy.get(tShirtMenu)
@@ -9,4 +10,5 @@ Cypress.Commands.add("selectProduct", (productName) => {
       .contains(productName)
       .parent().parent()
       .contains('Add to cart').click()
+    cy.get(continueShopping).click();
 })

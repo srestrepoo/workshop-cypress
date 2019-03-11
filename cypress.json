@@ -1,1 +1,4 @@
-{"modifyObstructiveCode": false}
+{
+    "modifyObstructiveCode": false,
+    "baseUrl": "http://automationpractice.com"
+}

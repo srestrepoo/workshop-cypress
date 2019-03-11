@@ -21,7 +21,7 @@ import './proceedToCheckout'
 import './selectProduct'
 import './paymentProcess'
 
-// import './mockRequests'
+import './mockRequests'
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
